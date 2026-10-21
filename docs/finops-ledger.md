@@ -36,7 +36,7 @@ If the quota runs out: switch Pro → Flash with a narrower prompt; then a teamm
 
 | Story | Assistant used | What it used (tokens, requests, or your own estimate) | What we gave it (files, story, schema) | What we would do differently |
 |---|---|---|---|---|
-|  |  |  |  |  |
+   | #1 Sign up with a university email | Claude (chat) | about 6 requests, 21 Oct | the story's criteria, docs/schema.md, db/schema.sql | test against a real Supabase project early — the email-confirmation limit only shows up there |
 
 ## Phase 4
 
