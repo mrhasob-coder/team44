@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up · Campus Textbook Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Campus Textbook Exchange</h1>
+    <p class="lead">Create your account with your university email.</p>
+
+    <form id="signup-form" novalidate>
+      <label for="full-name">Full name</label>
+      <input id="full-name" name="full_name" type="text" autocomplete="name" required>
+
+      <label for="student-id">Student ID</label>
+      <input id="student-id" name="student_id" type="text" inputmode="numeric" required>
+
+      <label for="email">University email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="name@ku.edu.kw" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="new-password" minlength="6" required>
+
+      <button id="signup-button" type="submit">Create account</button>
+    </form>
+
+    <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/client.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
