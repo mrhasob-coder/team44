@@ -26,3 +26,35 @@ async function requireAuth() {
 }
 
 window.requireAuth = requireAuth;
+
+async function requireAdmin() {
+  try {
+    const profile = await requireAuth();
+    if (!profile) return null;
+
+    if (profile.role !== "admin") {
+      const refusalHtml = `
+        <main class="card">
+          <p class="message error">This page is for library staff only.</p>
+          <p><a href="home.html">Back to home</a></p>
+        </main>
+      `;
+      if (document.body) {
+        document.body.innerHTML = refusalHtml;
+      } else {
+        window.addEventListener("DOMContentLoaded", () => {
+          document.body.innerHTML = refusalHtml;
+        });
+      }
+      return null;
+    }
+
+    return profile;
+  } catch (err) {
+    console.error(err);
+    window.location.href = "login.html";
+    return null;
+  }
+}
+
+window.requireAdmin = requireAdmin;
