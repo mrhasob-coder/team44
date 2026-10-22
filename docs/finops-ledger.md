@@ -38,6 +38,7 @@ If the quota runs out: switch Pro → Flash with a narrower prompt; then a teamm
 |---|---|---|---|---|
 | #1 Sign up with a university email | Claude (chat) | about 6 requests, 21 Oct | the story's criteria, docs/schema.md, db/schema.sql | test against a real Supabase project early — the email-confirmation limit only shows up there |
 | #2 Log in and log out | Antigravity (Gemini Flash) | 1 conversation, about 7 requests, 22 Oct | the story's criteria, AGENTS.md, docs/schema.md, js/config.js, js/client.js | give it the exact file list up front — it kept to it and touched nothing else |
+| #3 Library staff have an admin account | Antigravity (Gemini Pro) | 1 conversation, about 4 requests, 23 Oct | the story's criteria, AGENTS.md, docs/schema.md, db/schema.sql, home.html, js/auth.js, js/home.js | add "do not reformat existing code" — it rewrote all of js/home.js to add try/catch, so the diff looked bigger than the change |
 
 ## Phase 4
 
