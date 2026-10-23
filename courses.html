@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses · Campus Textbook Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card" id="courses-card" hidden>
+    <h1>Courses</h1>
+    <p class="lead">Add a course to the catalog.</p>
+
+    <form id="course-form" novalidate>
+      <label for="course_code">Course code</label>
+      <input id="course_code" name="course_code" type="text" required>
+
+      <label for="course_title">Course title</label>
+      <input id="course_title" name="course_title" type="text" required>
+
+      <label for="department">Department</label>
+      <input id="department" name="department" type="text" required>
+
+      <button id="save-button" type="submit">Save</button>
+    </form>
+
+    <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+
+    <p><a href="admin.html">Back to admin</a></p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/client.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/courses.js"></script>
+</body>
+</html>
